@@ -15,7 +15,7 @@ folder = fileparts(which(mfilename));
 addpath(genpath(folder));
 
 %% Database reading
-file_name = '/mitdb/100'; % file name related to the ECG signal from the MIT-BIH arrhythmia database
+file_name = 'mitdb/100'; % file name related to the ECG signal from the MIT-BIH arrhythmia database
 wfdbdownload(file_name); % downloading of the ECG data from the database
 [xa, Fs, tm] = rdsamp(['database/',file_name],1); % loading of the ECG signal in MATLAB
 x = xa(1:360*60); % selection of 1 min of ECG data
