@@ -21,7 +21,7 @@ wfdbdownload(file_name); % downloading of the ECG data from the database
 x = xa(1:360*60); % selection of 1 min of ECG data
 
 %% CS processing of the ECG signal
-[xest,xcut,alpha,y,Phi,x_th,Psi] = CS_power_based(x,720,90,0.2,'cvx'); % compression and reconstruction of the entire ECG signal
+[xest,xcut,alpha,y,Phi,x_th,Psi] = CS_power_based(x,720,180,0.2,'cvx'); % compression and reconstruction of the entire ECG signal
 
 %% Results displaying
 % plotting of the last sensing matrix Phi and of the Mexican Hat wavelet
